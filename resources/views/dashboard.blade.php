@@ -9,6 +9,7 @@
 
                 <div class="card-body">
                     {{ __("You're logged in!") }}
+                    <increment-counter />
                 </div>
             </div>
         </div>
