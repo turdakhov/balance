@@ -16,7 +16,7 @@ class TransactionFactory extends Factory
      */
     public function definition(): array
     {
-        $amount = random_int(-999999, 999999);
+        $amount = random_int(-9999999, 9999999) / 100;
         if ($amount < 0) {
             $isSuccess = random_int(0, 1);
         } else {
