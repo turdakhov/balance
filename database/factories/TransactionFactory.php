@@ -27,6 +27,7 @@ class TransactionFactory extends Factory
             'amount' => $amount,
             'is_success' => $isSuccess,
             'description' => fake()->sentence(),
+            'created_at' => fake()->dateTime()
         ];
     }
 }
