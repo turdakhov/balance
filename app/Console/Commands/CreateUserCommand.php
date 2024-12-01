@@ -26,7 +26,7 @@ class CreateUserCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Creating a user';
 
     /**
      * Execute the console command.
@@ -34,19 +34,19 @@ class CreateUserCommand extends Command
     public function handle()
     {
         $email = text(
-            label: 'User Email',
+            label: 'User Email *',
             placeholder: 'user@example.com',
             validate: ['email' => 'required|email|unique:users']
         );
 
         $name = text(
-            label: 'User Name',
+            label: 'User Name *',
             placeholder: 'Vasya Pupkin',
             validate: ['name' => 'required|string|between:3,100']
         );
 
         $password = password(
-            label: 'Password',
+            label: 'Password *',
             hint: 'Minimum 8 characters',
             validate: ['password' => 'required|string|between:8,20']
         );
