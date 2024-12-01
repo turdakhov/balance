@@ -12,7 +12,8 @@ class Balance extends Model
     use HasFactory;
 
     protected $fillable = [
-        'amount'
+        'amount',
+        'user_id',
     ];
 
     public function user(): BelongsTo

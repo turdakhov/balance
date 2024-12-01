@@ -47,6 +47,15 @@ class User extends Authenticatable
         ];
     }
 
+    protected static function booted(): void
+    {
+        static::created(function (User $user) {
+            Balance::create([
+                'user_id' => $user->id,
+            ]);
+        });
+    }
+
     public function balance(): HasOne
     {
         return $this->hasOne(Balance::class);

@@ -14,11 +14,10 @@ class BalanceSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::all();
-        foreach ($users as $user) {
-            Balance::factory()->create([
-                'user_id' => $user->id,
-            ]);
+        $balances = Balance::all();
+        foreach ($balances as $balance) {
+            $balance->amount = random_int(0, 99999999) / 10;
+            $balance->save();
         }
     }
 }
