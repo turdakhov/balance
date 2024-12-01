@@ -2,9 +2,9 @@ import './bootstrap';
 import 'bootstrap';
 
 import { createApp } from 'vue';
-import IncrementCounter from './components/IncrementCounter.vue';
+import Dashboard from './components/Dashboard.vue';
 
 createApp({})
-  .component('IncrementCounter', IncrementCounter)
+  .component('Dashboard', Dashboard)
   .mount('#app')
 
